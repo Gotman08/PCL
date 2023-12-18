@@ -44,6 +44,5 @@ Route::get('/resetpassword', function () {
 });
 
 
-Route::get('/register', 'RegisterController');
 
 Route::post('/register', 'AuthController@register')->name('register');
