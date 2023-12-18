@@ -44,6 +44,33 @@
         document.documentElement.classList.remove('dark')
     }
     </script>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required autofocus>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required>
+        </div>
+
+        <div>
+            <label for="password_confirmation">Confirm Password</label>
+            <input id="password_confirmation" type="password" name="password_confirmation" required>
+        </div>
+
+        <div>
+            <button type="submit">Create an account</button>
+        </div>
+    </form>
 </head>
 <section class="bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/background.jpg')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply bg-opacity-60">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen pt:mt-0">
