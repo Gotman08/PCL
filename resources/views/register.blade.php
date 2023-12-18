@@ -46,33 +46,7 @@
     </script>
     
 </head>
-<form method="POST" action="{{ route('register') }}">
-    @csrf
 
-    <div>
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required autofocus>
-    </div>
-
-    <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required>
-    </div>
-
-    <div>
-        <label for="password">Password</label>
-        <input id="password" type="password" name="password" required>
-    </div>
-
-    <div>
-        <label for="password_confirmation">Confirm Password</label>
-        <input id="password_confirmation" type="password" name="password_confirmation" required>
-    </div>
-
-    <div>
-        <button type="submit">Create an account</button>
-    </div>
-</form>
 <section class="bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/background.jpg')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply bg-opacity-60">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen pt:mt-0">
         <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-white">
@@ -90,14 +64,14 @@
                 <linearGradient id="paint8_linear_11430_22515" x1="7.15667" y1="21.5399" x2="14.0824" y2="31.9579" gradientUnits="userSpaceOnUse"><stop stop-color="#0092FF"/><stop offset="1" stop-color="#45B2FF"/></linearGradient>
                 </defs>
             </svg>
-            Flowbite    
         </a>
+        
         <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800">
             <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
                 <h2 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
                     Create your Free Account
                 </h2>
-                <form class="space-y-4 md:space-y-6" action="#">
+                <form method="POST" action="{{ route('register') }}"class="space-y-4 md:space-y-6">
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                         <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required="">
