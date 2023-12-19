@@ -49,6 +49,7 @@
   <body>
     <header>
     @include('NavBar')
+    
     @yield('BeginNavBar')
     @yield('BeginCenterNavBar')
     @yield('TogglerDarkMode')
@@ -69,6 +70,7 @@
     @yield('EndCenterNavBar')
     @yield('ContentNavBar')
     @yield('EndNavBar')
+
     </header>
     
     @yield('Start')

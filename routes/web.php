@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,4 @@ Route::get('/resetpassword', function () {
 
 
 
-Route::post('/register', 'AuthController@register')->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
