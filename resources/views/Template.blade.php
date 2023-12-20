@@ -79,7 +79,14 @@
     @yield('contact')
     @yield('Team')
     @yield('application')
-
+    
+    @if(Auth::check())
+        @yield('user')
+    @else
+        @php
+        return redirect()->route('login');
+        @endphp
+    @endif
 
 
     

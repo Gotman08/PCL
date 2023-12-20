@@ -1,10 +1,10 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+
 <head>
-
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -18,18 +18,18 @@
                     <form method="POST" action="{{ route('login') }}" class="space-y-4 md:space-y-6">
                         @csrf
                         <div>
-                            <x-input-label for="email" :value="__('Your email')" />
-                            <x-text-input id="email" type="email" name="email" :value="old('email')" required autofocus class="block mt-1 w-full" />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            <x-input-label for="Email" :value="__('Your email')" />
+                            <x-text-input id="Email" type="Email" name="Email" :value="old('Email')" required autofocus class="block mt-1 w-full" />
+                            <x-input-error :messages="$errors->get('Email')" class="mt-2" />
                         </div>
                         <div>
-                            <x-input-label for="password" :value="__('Password')" />
-                            <x-text-input id="password" type="password" name="password" required autocomplete="current-password" class="block mt-1 w-full" />
-                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                            <x-input-label for="Password" :value="__('Password')" />
+                            <x-text-input id="Password" type="Password" name="Password" required autocomplete="current-password" class="block mt-1 w-full" />
+                            <x-input-error :messages="$errors->get('Password')" class="mt-2" />
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="flex items-start">
-                                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" >
                                 <label for="remember" class="ml-3 text-sm text-gray-500 dark:text-gray-300">Remember me</label>
                             </div>
                             <a href="{{ route('password.request') }}" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
@@ -39,7 +39,7 @@
                         </button>
 
                         <p class="text-sm font-light text-center text-gray-500 dark:text-gray-300">
-                            <a href="{{ route('register') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Don't have an account?</a>
+                            <a href="{{ route('Register') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Don't have an account?</a>
                         </p>
                     </form>
                 </div>
@@ -49,3 +49,4 @@
     @include('Footer')
     @yield('footer')
 </body>
+</html>

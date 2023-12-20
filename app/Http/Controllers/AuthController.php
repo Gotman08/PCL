@@ -14,7 +14,7 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:8',
+            'password' => 'required|confirmed|min:1',
         ]);
 
         $user = User::create([
@@ -25,6 +25,6 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('welcome');
+        return redirect()->intended(redirect()->intended(RouteServiceProvider::HOME));
     }
 }
